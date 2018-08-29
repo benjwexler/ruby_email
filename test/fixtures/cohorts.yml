@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  start_day: 1
+  start_month: 1
+  start_year: 1
+  end_day: 1
+  end_month: 1
+  end_year: 1
+  instructor_id: 1
+  course_id: 1
+
+two:
+  name: MyString
+  start_day: 1
+  start_month: 1
+  start_year: 1
+  end_day: 1
+  end_month: 1
+  end_year: 1
+  instructor_id: 1
+  course_id: 1

@@ -1,0 +1,41 @@
+<%= form_with(model: enrollment, local: true) do |form| %>
+    <% if enrollment.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(enrollment.errors.count, "error") %> prohibited this enrollment from being saved:</h2>
+  
+        <ul>
+        <% enrollment.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+
+  
+
+  <input  type="hidden" name="enrollment[student_id]" value= "<%=params[:id]%>"> 
+
+  </input>
+
+
+  
+   
+
+  <div class="field">
+    <label for="enrollment_cohort_id">Cohort</label><br>
+    <select name="enrollment[cohort_id]" id="enrollment_cohort_id">
+    <% i= 0 %>
+    <% @names.each do |name| %>
+      <option value="<%=@values[i]%>"><%=name%></option>
+    
+      <% i+=1 %>
+    <%end%>
+  </div>
+ 
+
+  
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>

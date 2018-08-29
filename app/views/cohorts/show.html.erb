@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cohort.name %>
+</p>
+
+<p>
+  <strong>Start day:</strong>
+  <%= @cohort.start_date %>
+</p>
+
+<p>
+  <strong>End day:</strong>
+  <%= @cohort.end_date %>
+</p>
+
+
+<p>
+  <strong>Course:</strong>
+  <%= @cohort.course_id %>
+</p>
+
+<p>
+  <strong>Students:</strong>
+
+  <%@students.each do |student|%>
+    <a href="/students/<%=student[1]%>"><%=student[0]%></a>,
+  <%end%>
+
+
+
+</p>
+
+<h1>New Enrollment</h1>
+
+
+
+
+<%= render 'new_enrollment', enrollment: @enrollment %>
+
+<%= link_to 'Edit', edit_cohort_path(@cohort) %> |
+<%= link_to 'Back', cohorts_path %>

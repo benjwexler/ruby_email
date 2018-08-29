@@ -1,0 +1,55 @@
+
+
+<p id="notice"><%= notice %></p>
+
+<h1>Cohorts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Instructor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cohorts.each do |cohort| %>
+      <tr>
+        <td><%= cohort.name %></td>
+    
+    
+        
+
+        <td>
+        
+        <%= cohort.start_date.strftime("%B, %d, %Y")%>
+        </td>
+     
+        <td><%= cohort.end_date.strftime("%B, %d, %Y") %></td>
+        <%begin%>
+        <td>
+        
+        <a href="/instructors/<%=cohort.instructor_id%>"><%=Instructor.find(cohort.instructor_id).full_name%></a>,
+          <%rescue%>
+          <td>???</td>
+          <%end%>
+        
+        <td><%= link_to 'Show', cohort %></td>
+        <td><%= link_to 'Edit', edit_cohort_path(cohort) %></td>
+        <td><%= link_to 'Destroy', cohort, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cohort', new_cohort_path %>
+<%= link_to 'Instructor', instructors_path %>
+<%= link_to 'Enrollments', enrollments_path %>
+<%= link_to 'Cohorts', cohorts_path %>
+<%= link_to 'Courses', courses_path %>
+<%= link_to 'Students', students_path %>

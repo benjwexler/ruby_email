@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Enrollments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Student</th>
+      <th>Cohort</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @enrollments.each do |enrollment| %>
+      <tr>
+      
+        <td><a href="/students/<%=enrollment.student_id%>"><%= Student.find(enrollment.student_id).full_name %></a></td>
+
+
+      
+        
+        
+          <%begin%>
+          <td>
+          <a href="/cohorts/<%=enrollment.cohort_id%>"><%=Cohort.find(enrollment.cohort_id).name%></a>,
+          <%rescue%>
+          <td>deleted</td>
+          <%end%>
+        <td><%= link_to 'Show', enrollment %></td>
+        <td><%= link_to 'Edit', edit_enrollment_path(enrollment) %></td>
+        <td><%= link_to 'Destroy', enrollment, method: :delete, remote: true, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Enrollment', new_enrollment_path %>
+
+<%= link_to 'Instructor', instructors_path %>
+<%= link_to 'Enrollments', enrollments_path %>
+<%= link_to 'Cohorts', cohorts_path %>
+<%= link_to 'Courses', courses_path %>
+<%= link_to 'Students', students_path %>

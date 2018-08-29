@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @instructor.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @instructor.last_name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @instructor.age %>
+</p>
+
+<p>
+  <strong>Salary:</strong>
+  <%= @instructor.salary %>
+</p>
+
+<p>
+  <strong>Highest education:</strong>
+  <%= @instructor.highest_education %>
+</p>
+
+<p>
+  <strong>Teaching:</strong>
+
+  <%@instructor.cohorts.each do |cohort|%>
+    <a href="/cohorts/<%=cohort.id%>"><%=cohort.name%></a>,
+  <%end%>
+</p>
+
+
+<%= link_to 'Edit', edit_instructor_path(@instructor) %> |
+<%= link_to 'Back', instructors_path %>

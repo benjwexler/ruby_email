@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @student.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @student.last_name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @student.age %>
+</p>
+
+<p>
+  <strong>Cohort:</strong>
+  
+<br>
+  <%@student.enrollments.each do |cohort|%>
+    <div id="enrollment-<%=cohort.id%>">
+    <a href="/cohorts/<%=cohort.cohort_id%>"><%=Cohort.find(cohort.cohort_id).name%></a>,
+
+<td><a data-confirm="Are you sure?" data-remote="true" rel="nofollow" data-method="delete" href="/enrollments/<%=cohort.id%> ">Destroy</a></td>
+  </div>  
+  <br>
+    <%end%>
+
+
+  
+  
+</p>
+
+
+
+
+
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %> |
+<%= link_to 'New Enrollment', new_enrollment_path %>
+
+<br>
+<br>
+
+<%if @values.length >0 %>
+
+<h1>New Enrollment</h1>
+
+
+
+
+<%= render 'new_enrollment', enrollment: @enrollment %>
+<%else %>
+<h1>Student is registered in all available cohorts</h1>
+<%end %>
+
+<br>
+<br>
+<br>
+
+<h3>Remove Student from currently enrolled cohorts </h1>
+<h5>(this does not work right now!)</h1>
+<%= render 'remove_enrollment', enrollment: @enrollment %>

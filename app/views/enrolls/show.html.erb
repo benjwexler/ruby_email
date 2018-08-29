@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Student:</strong>
+  <a href="/students/<%=@enrollment.student_id%>"><%= Student.find(@enrollment.student_id).full_name %></a>
+</p>
+
+<p>
+  <strong>Cohort:</strong>
+  <a href="/cohorts/<%=@enrollment.cohort_id%>"><%= Cohort.find(@enrollment.cohort_id).name %></a>
+</p>
+
+<%= link_to 'Edit', edit_enrollment_path(@enrollment) %> |
+<%= link_to 'Back', enrollments_path %>
