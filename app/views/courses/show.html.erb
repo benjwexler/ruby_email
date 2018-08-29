@@ -16,7 +16,14 @@
   
   <%@course.cohorts.each do |cohort|%>
     <a href="/cohorts/<%=cohort.id%>"><%=cohort.start_date.strftime("%B, %d, %Y")%></a>,
+
+    <td><a data-confirm="Are you sure?" data-remote="true" rel="nofollow" data-method="delete" href="/cohorts/<%=cohort.id%> ">Destroy</a></td>
+    </div>  
+    <br>
+
   <%end%>
+
+ 
 
 </p>
 
