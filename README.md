@@ -10,5 +10,7 @@ Key Terms:
 Steps 
 
 <ol> 
-  <li>Create new Rails App (with postgresql database) - rails new new_app_name -d postgresql</li>
+  <li>Create new Rails App (with postgresql database) - rails new new_app_name -d postgresql
+    <ul>ffffr </ul>
+  </li>
 </ol>
