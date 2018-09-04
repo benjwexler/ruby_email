@@ -1,46 +1,73 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Enrollments</h1>
+<div class="container" id="content">
+<div id="mainz" class="row">
+    <div class="col-sm-12 col-lg-12">
 
-<table>
-  <thead>
-    <tr>
-      <th>Student</th>
-      <th>Cohort</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @enrollments.each do |enrollment| %>
-      <tr>
-      
-        <td><a href="/students/<%=enrollment.student_id%>"><%= Student.find(enrollment.student_id).full_name %></a></td>
+        <table id="example" class="table table-striped table-sm table-hover  table-bordered" style="border-collapse:collapse;">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Student</th>
+                    <th>Cohort</th>
+                    <th>Show</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
 
 
-      
+                </tr>
+            </thead>
+            <tbody>
+
+            <% @enrollments.each do |enrollment| %>
+              <tr>
+              
+                <td><a href="/students/<%=enrollment.student_id%>"><%= Student.find(enrollment.student_id).full_name %></a></td>
         
         
-          <%begin%>
-          <td>
-          <a href="/cohorts/<%=enrollment.cohort_id%>"><%=Cohort.find(enrollment.cohort_id).name%></a>,
-          <%rescue%>
-          <td>deleted</td>
-          <%end%>
-        <td><%= link_to 'Show', enrollment %></td>
-        <td><%= link_to 'Edit', edit_enrollment_path(enrollment) %></td>
-        <td><%= link_to 'Destroy', enrollment, method: :delete, remote: true, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+              
+                
+                
+                  <%begin%>
+                  <td>
+                  <a href="/cohorts/<%=enrollment.cohort_id%>"><%=Cohort.find(enrollment.cohort_id).name%></a>
+                  <%rescue%>
+                  <td>deleted</td>
+                  <%end%>
 
-<br>
+                  
+                <td><%= link_to 'Show', enrollment %></td>
 
-<%= link_to 'New Enrollment', new_enrollment_path %>
+                <td>
+    <a href="/enrollments/<%=enrollment.id%>/edit" <i class="fas fa-edit  fa-2x"></i></a>
+</td>
 
-<%= link_to 'Instructor', instructors_path %>
-<%= link_to 'Enrollments', enrollments_path %>
-<%= link_to 'Cohorts', cohorts_path %>
-<%= link_to 'Courses', courses_path %>
-<%= link_to 'Students', students_path %>
+<td><a data-confirm="Are you sure?" data-remote="true" rel="nofollow" data-method="delete" href="/enrollments/<%=enrollment.id%>">
+   <i class="fas fa-trash fa-stroopwafel fa-2x"></i>
+ </a>
+</td>
+                
+              </tr>
+            <% end %>
+              
+
+
+
+            </tbody>
+            <tfoot class="thead-dark">
+                <tr>
+                    <th>Student</th>
+                    <th>Cohort</th>
+                    
+                    <th>Edit</th>
+                    <th>Delete</th>
+                    
+
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+
+</div>
+

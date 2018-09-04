@@ -1,6 +1,18 @@
-<h1>Editing Instructor</h1>
 
-<%= render 'form', instructor: @instructor %>
 
-<%= link_to 'Show', @instructor %> |
-<%= link_to 'Back', instructors_path %>
+<div class="container" id="content">
+<p id="notice"><%= notice %></p>
+<div id="mainz" class="row newSomething ">
+        <div class="col-sm-6 col-md-4 col-lg-4 showCard">
+<br>
+        <h1>Edit Info:</h1>
+
+        <%= render 'form', instructor: @instructor %>
+        
+        <%= link_to 'Show', @instructor %> |
+        <%= link_to 'Back', instructors_path %>
+
+</div>
+</div>
+</div>
+

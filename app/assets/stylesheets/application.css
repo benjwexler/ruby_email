@@ -584,7 +584,19 @@
    .purpleFont {
       color: rgba(76, 26, 156, 0.783);
    }
+
+   .blackFont {
+    color: black;
+ }
+
+ 
   
    .centerVert {
       margin-top: 20px;
   }
+
+  #tablePadding {
+      padding-top: 20px;
+  }
+
+  

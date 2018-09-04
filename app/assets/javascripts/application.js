@@ -15,6 +15,48 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function() {
-    $('#example').DataTable();
-} );
+//= require jquery
+//= require jquery_ujs
+
+function loadSearch(){
+    $(document).ready(function() {
+        $('#example').DataTable();
+    } );
+}
+
+// $(document).ready(function() {
+//     $('#example').DataTable();
+// } );
+
+$( document ).on('turbolinks:load', function() {
+    console.log("It works on each visit!");
+    loadSearch()
+  })
+
+//   $(document).on('page:load', function(){
+
+//     $(document).on('click', 'allStudents', function() {
+
+//         console.log("modal Restarted");
+  
+//       $('#myModal').modal();
+  
+//     });
+  
+//   });
+
+// let allStudents = document.getElementById("allStudents")
+
+// allStudents.addEventListener("click", loadSearch())
+
+
+
+// var ready;
+// ready = function() {
+
+//     $('#example').DataTable();
+
+// };
+
+// $(document).ready(ready);
+// $(document).on('page:load', ready);

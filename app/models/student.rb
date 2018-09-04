@@ -13,17 +13,19 @@ class Student < ApplicationRecord
     def age(dob)
         now = Time.now.utc.to_date
         now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
-        puts now.to_time.to_i
-        puts dob.to_time.to_i
+        # puts now.to_time.to_i
+        # puts dob.to_time.to_i
 
-        "1-1-2012".to_date 
+        # "1-1-2012".to_date 
     end
 
       def validate_age
-        if birth_date.present? && birth_date > 18.years.ago.to_d
-            errors.add(:birth_date, 'You should be over 18 years old.')
+        if birthday.present? && birthday > 18.years.ago.to_d
+            errors.add(:birthday, 'You should be over 18 years old.')
         end
     end
+
+    
 
 
 

@@ -7,6 +7,8 @@ class CohortsController < ApplicationController
   # GET /cohorts.json
   def index
     @cohorts = Cohort.all.paginate(:per_page => 20, :page => params[:page])
+    @title = "Cohorts"
+    @all_or_new = "All"
 
     
 
@@ -15,6 +17,8 @@ class CohortsController < ApplicationController
   # GET /cohorts/1
   # GET /cohorts/1.json
   def show
+    @title = @cohort.id
+    @all_or_new = "Cohort"
 
     @student = Student.new 
 
@@ -50,10 +54,15 @@ class CohortsController < ApplicationController
   # GET /cohorts/new
   def new
     @cohort = Cohort.new
+    @title = "Cohort"
+    @all_or_new = "New"
   end
 
   # GET /cohorts/1/edit
   def edit
+
+    @title = @cohort.id
+    @all_or_new = "Cohort"
   end
 
   # POST /cohorts

@@ -1,14 +1,29 @@
-<p id="notice"><%= notice %></p>
+<div class="container" id="content">
+        <div id="mainz" class="row newSomething">
+        <p id="notice"><%= notice %></p>
+            <div class="col-sm-12 col-md-9 col-lg-8">
+                    <div class="card">
+                            <div class="card-body">
+                                
+                              <h5 class="card-title">Student Name:</h5>
+                              <p class="card-text">
+                              <a href="/students/<%=@enrollment.student_id%>"><%= Student.find(@enrollment.student_id).full_name %></a>
+                              </p>
+                              <h5 class="card-title">Cohort Name:</h5>
+                              <p class="card-text">
+                              <a href="/cohorts/<%=@enrollment.cohort_id%>"><%= Cohort.find(@enrollment.cohort_id).name %></a>
+                              </p>
+                              <a href="/enrollments/<%=@enrollment.id%>/edit" class="btn btn-primary">Edit</a>
+                              <a href="#" class="btn btn-primary">Remove</a>
+                              
+                            </div>
+                          </div>
 
-<p>
-  <strong>Student:</strong>
-  <a href="/students/<%=@enrollment.student_id%>"><%= Student.find(@enrollment.student_id).full_name %></a>
-</p>
+            </div>
+        </div>
 
-<p>
-  <strong>Cohort:</strong>
-  <a href="/cohorts/<%=@enrollment.cohort_id%>"><%= Cohort.find(@enrollment.cohort_id).name %></a>
-</p>
 
-<%= link_to 'Edit', edit_enrollment_path(@enrollment) %> |
-<%= link_to 'Back', enrollments_path %>
+    </div>
+
+
+

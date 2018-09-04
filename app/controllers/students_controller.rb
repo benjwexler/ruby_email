@@ -8,6 +8,9 @@ class StudentsController < ApplicationController
     @students = Student.all
     @cohorts = Cohort.all
 
+    @title = "Students"
+    @all_or_new = "All"
+
   end
 
   # GET /students/1
@@ -33,6 +36,9 @@ class StudentsController < ApplicationController
         
       end
     end 
+
+    @title = @student.last_name
+    @all_or_new = @student.first_name
 
     puts @enrollment_ids
 
@@ -63,10 +69,15 @@ class StudentsController < ApplicationController
   # GET /students/new
   def new
     @student = Student.new
+    @title = "Student"
+    @all_or_new = "New"
+    
   end
 
   # GET /students/1/edit
   def edit
+    @title = @student.last_name
+    @all_or_new = @student.first_name
   end
 
   # POST /students

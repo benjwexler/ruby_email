@@ -6,16 +6,22 @@ class EnrollmentsController < ApplicationController
   # GET /enrollments.json
   def index
     @enrollments = Enrollment.all
+    @title = "Enrollments"
+    @all_or_new = "All"
   end
 
   # GET /enrollments/1
   # GET /enrollments/1.json
   def show
+    @title = @enrollment.id
+    @all_or_new = "Enrollment"
   end
 
   # GET /enrollments/new
   def new
     @enrollment = Enrollment.new
+    @title = "Enrollment"
+    @all_or_new = "New"
 
   
   end
@@ -26,6 +32,8 @@ class EnrollmentsController < ApplicationController
 
   # GET /enrollments/1/edit
   def edit
+    @title = @enrollment.id
+    @all_or_new = "Enrollment"
   end
 
   # POST /enrollments

@@ -6,20 +6,29 @@ class InstructorsController < ApplicationController
   # GET /instructors.json
   def index
     @instructors = Instructor.all
+    @title = "Instructors"
+    @all_or_new = "All"
   end
 
   # GET /instructors/1
   # GET /instructors/1.json
   def show
+
+    @title = @instructor.last_name
+    @all_or_new = @instructor.first_name
   end
 
   # GET /instructors/new
   def new
     @instructor = Instructor.new
+    @title = "Instructor"
+    @all_or_new = "New"
   end
 
   # GET /instructors/1/edit
   def edit
+    @title = @instructor.last_name
+    @all_or_new = @instructor.first_name
   end
 
   # POST /instructors

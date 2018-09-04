@@ -6,21 +6,29 @@ class CoursesController < ApplicationController
   # GET /courses.json
   def index
     @courses = Course.all
+    @title = "Courses"
+    @all_or_new = "All"
   end
 
   # GET /courses/1
   # GET /courses/1.json
   def show
     @cohort = Cohort.new
+    @title = @course.id
+    @all_or_new = "Course"
   end
 
   # GET /courses/new
   def new
     @course = Course.new
+    @title = "Course"
+    @all_or_new = "New"
   end
 
   # GET /courses/1/edit
   def edit
+    @title = @course.id
+    @all_or_new = "Course"
   end
 
   # POST /courses
