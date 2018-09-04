@@ -8,7 +8,6 @@ class StudentsController < ApplicationController
     @students = Student.all
     @cohorts = Cohort.all
 
-    p @cohorts[0].name
   end
 
   # GET /students/1
@@ -74,7 +73,7 @@ class StudentsController < ApplicationController
   # POST /students.json
   def create
     @student = Student.new(student_params)
-
+    
     respond_to do |format|
       if @student.save
         format.html { redirect_to @student, notice: 'Student was successfully created.' }
@@ -118,10 +117,12 @@ class StudentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def student_params
-      params.require(:student).permit(:first_name, :last_name, :age)
+      params.require(:student).permit(:first_name, :last_name, :birthday)
     end
 
     def set_enrollment
       @enrollment = Enrollment.find(params[:id])
     end 
+
+    
 end

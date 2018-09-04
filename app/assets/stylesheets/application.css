@@ -1,12 +1,7 @@
-// Place all the styles related to the Instructors controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
 
-body {
-    font-size: 30px;
-}
-
-/* #classModal {} */
+/* #classModal {} *= require dataTables/jquery.dataTables
+ */
 
 .modal-body {
     overflow-x: auto;
@@ -34,11 +29,14 @@ body {
   
   /* .custom-select {
       color: #0aa89e;
-      /* background: black; */
+      /* background: black; *= require dataTables/jquery.dataTables
+ */
   
     .courseTitle{
-      /* background: rgba(0, 238, 255, 0.301); */
-      /* background: white; */
+      /* background: rgba(0, 238, 255, 0.301); *= require dataTables/jquery.dataTables
+ */
+      /* background: white; *= require dataTables/jquery.dataTables
+ */
       font-size: 22px;
       color: black;
       /* text-shadow:
@@ -46,8 +44,10 @@ body {
     -1px -1px 0 purple,  
      1px -1px 0 purple,
      -1px 1px 0 purple,
-      1px 1px 0 purple; */
-      /* font-size: 30px; */
+      1px 1px 0 purple; *= require dataTables/jquery.dataTables
+ */
+      /* font-size: 30px; *= require dataTables/jquery.dataTables
+ */
       
     }
   
@@ -57,14 +57,19 @@ body {
     }
   
     .btn {
-      /* background: rgba(0, 238, 255, 0.301);  */
-      /* color: rgb(71, 57, 220); */
+      /* background: rgba(0, 238, 255, 0.301);  *= require dataTables/jquery.dataTables
+ */
+      /* color: rgb(71, 57, 220); *= require dataTables/jquery.dataTables
+ */
       /* background: rgba(215, 17, 103, 0.783); 
-      background: rgba(198, 17, 215, 0.317);  */
-      /* background: rgba(18, 182, 3, 0.317);  */
+      background: rgba(198, 17, 215, 0.317);  *= require dataTables/jquery.dataTables
+ */
+      /* background: rgba(18, 182, 3, 0.317);  *= require dataTables/jquery.dataTables
+ */
       color: black;
       border: 2px solid rgb(0, 238, 255);
-      /* border-radius: 80%; */
+      /* border-radius: 80%; *= require dataTables/jquery.dataTables
+ */
   
       background: white;
   
@@ -89,20 +94,25 @@ body {
   
     .tableFontColor {
         /* color: rgb(69, 52, 52);
-        color: rgb(186, 43, 43); */
+        color: rgb(186, 43, 43); *= require dataTables/jquery.dataTables
+ */
     }
   
     /* .fa-trash {
         width: 200px;
-    } */
+    } *= require dataTables/jquery.dataTables
+ */
   
     #secondColorText {
        color: rgb(57, 201, 163);
        color: white;
-       /* color: rgba(198, 17, 215, 0.591); */
-       /* color: white; */
+       /* color: rgba(198, 17, 215, 0.591); *= require dataTables/jquery.dataTables
+ */
+       /* color: white; *= require dataTables/jquery.dataTables
+ */
        -webkit-text-stroke: 1px black;
-       /* color: white; */
+       /* color: white; *= require dataTables/jquery.dataTables
+ */
        text-shadow:
            3px 3px 0 rgba(198, 17, 215, 0.591),
          -1px -1px 0 rgba(198, 17, 215, 0.591),  
@@ -118,7 +128,8 @@ body {
       background: rgba(20, 17, 186, 0.171);
       background: linear-gradient(to right, white 66%, #00ffff41 100%);
       
-      /* background: linear-gradient(to right, rgba(173, 237, 23, 0.589) 66%, #00ffff41 100%); */
+      /* background: linear-gradient(to right, rgba(173, 237, 23, 0.589) 66%, #00ffff41 100%); *= require dataTables/jquery.dataTables
+ */
       
       left: 20px;
       
@@ -129,18 +140,22 @@ body {
       font-size: 60px;  
       z-index: -99;
      font-family: 'Fugaz One', cursive;
-      /* font-family: 'Fredericka the Great', cursive;  */
+      /* font-family: 'Fredericka the Great', cursive;  *= require dataTables/jquery.dataTables
+ */
       border: 4px solid black;;
       text-shadow: 3px 3px 7px rgba(150, 150, 150, 1);
-      /* border-radius: 1%; */
+      /* border-radius: 1%; *= require dataTables/jquery.dataTables
+ */
       
       /* color: white;
    text-shadow:
     -1px -1px 0 #000,  
      1px -1px 0 #000,
      -1px 1px 0 #000,
-      1px 1px 0 #000;  */
-      /* font-family: 'Freckle Face', cursive; */
+      1px 1px 0 #000;  *= require dataTables/jquery.dataTables
+ */
+      /* font-family: 'Freckle Face', cursive; *= require dataTables/jquery.dataTables
+ */
       
   
   
@@ -159,7 +174,8 @@ body {
       background: rgba(17, 186, 169, 0.804);
       background: rgb(0, 238, 255);
       background: rgba(0, 238, 255, 0.795);
-      /* background: rgba(165, 139, 136, 0.795); */
+      /* background: rgba(165, 139, 136, 0.795); *= require dataTables/jquery.dataTables
+ */
   
       min-height: 95vh;
       position: absolute;
@@ -167,8 +183,10 @@ body {
       border-top-left-radius: 25%;
       border-top-right-radius: 25%;
       margin-left: 20px;
-      /* background: #70c1c25e; */
-      /* opacity: .7; */
+      /* background: #70c1c25e; *= require dataTables/jquery.dataTables
+ */
+      /* opacity: .7; *= require dataTables/jquery.dataTables
+ */
       
   }
   
@@ -195,34 +213,45 @@ body {
   #content {
       margin-top: 100px;
       margin-left: 300px;
-      /* margin: auto; */
+      /* margin: auto; *= require dataTables/jquery.dataTables
+ */
       /* margin-right: 200px;
-      margin-left: 300px; */
-      /* align-items: stretch; */
+      margin-left: 300px; *= require dataTables/jquery.dataTables
+ */
+      /* align-items: stretch; *= require dataTables/jquery.dataTables
+ */
   }
   
   .sidebar-header {
       color: white;
       background: rgba(0, 0, 0, 0.81);
       
-      /* background: rgb(0, 0, 0, .88); */
+      /* background: rgb(0, 0, 0, .88); *= require dataTables/jquery.dataTables
+ */
       box-shadow: 20px 20px rgba(198, 17, 215, 0.591); 
       /* box-shadow: 10px 20px rgba(198, 17, 215, 0.591); 
-      box-shadow: 2px 2px rgba(198, 17, 215, 0.466);  */
-      /* border: 5px solid rgba(198, 17, 215, 0.466);   */
-      /* border-radius: 5%; */
+      box-shadow: 2px 2px rgba(198, 17, 215, 0.466);  *= require dataTables/jquery.dataTables
+ */
+      /* border: 5px solid rgba(198, 17, 215, 0.466);   *= require dataTables/jquery.dataTables
+ */
+      /* border-radius: 5%; *= require dataTables/jquery.dataTables
+ */
       justify-content: center;
       position: relative;
      height: 500px;
-     /* border-radius: 30%; */
+     /* border-radius: 30%; *= require dataTables/jquery.dataTables
+ */
   }
   
   #mainz{
-      /* margin: auto; */
-      /* display: flex; */
+      /* margin: auto; *= require dataTables/jquery.dataTables
+ */
+      /* display: flex; *= require dataTables/jquery.dataTables
+ */
       width: 80vw;
       padding-right: 120px;
-      /* margin-left: 30px; */
+      /* margin-left: 30px; *= require dataTables/jquery.dataTables
+ */
   }
   
   @media (max-width: 600px) {
@@ -246,7 +275,8 @@ body {
   
   /*
       ADDITIONAL DEMO STYLE, NOT IMPORTANT TO MAKE THINGS WORK BUT TO MAKE IT A BIT NICER :)
-  */
+  *= require dataTables/jquery.dataTables
+ */
   @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
   
   
@@ -270,15 +300,20 @@ body {
   }
   
   #sidebar {
-      /* don't forget to add all the previously mentioned styles here too */
-      /* background: rgba(17, 186, 169, 0.804); */
+      /* don't forget to add all the previously mentioned styles here too *= require dataTables/jquery.dataTables
+ */
+      /* background: rgba(17, 186, 169, 0.804); *= require dataTables/jquery.dataTables
+ */
       /* border: 40px solid rgba(0, 0, 0, 0.87);
       border-top: 35px solid rgba(0, 0, 0, 0.87);
       border-bottom: 20px solid rgba(0, 0, 0, 0.87);
-      border-right: 20px solid rgba(0, 0, 0, 0.87); */
+      border-right: 20px solid rgba(0, 0, 0, 0.87); *= require dataTables/jquery.dataTables
+ */
       
-      /* background: rgba(17, 186, 169, 0.356); */
-      /* color: rgb(86, 73, 171); */
+      /* background: rgba(17, 186, 169, 0.356); *= require dataTables/jquery.dataTables
+ */
+      /* color: rgb(86, 73, 171); *= require dataTables/jquery.dataTables
+ */
       transition: all 0.3s;
       
   }
@@ -286,7 +321,8 @@ body {
   #sidebar .sidebar-header {
       padding: 0px;
       height: 200px;
-      /* background: rgba(17, 186, 169, 0.804); */
+      /* background: rgba(17, 186, 169, 0.804); *= require dataTables/jquery.dataTables
+ */
       text-align: left;
       
   }
@@ -309,18 +345,21 @@ body {
       display: block;
   }
   #sidebar ul li a:hover {
-      /* color: #7386D5; */
+      /* color: #7386D5; *= require dataTables/jquery.dataTables
+ */
       background: #fff;
   }
   
   #sidebar ul li.active > a, a[aria-expanded="true"] {
       color: #fff;
-      /* background: #6d7fcc; */
+      /* background: #6d7fcc; *= require dataTables/jquery.dataTables
+ */
   }
   ul ul a {
       font-size: 0.9em !important;
       padding-left: 30px !important;
-      /* background: #6d7fcc; */
+      /* background: #6d7fcc; *= require dataTables/jquery.dataTables
+ */
   }
   
   #lefty {
@@ -344,11 +383,16 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Special Elite', cursive;
-  /* /* font-family: 'Fugaz One', cursive; */
-  /* font-family: 'Fredericka the Great', cursive; */
-  /* font-family: 'Freckle Face', cursive; */
-  /* font-size: 36px; */
-  /* columns: white; */
+  /* /* font-family: 'Fugaz One', cursive; *= require dataTables/jquery.dataTables
+ */
+  /* font-family: 'Fredericka the Great', cursive; *= require dataTables/jquery.dataTables
+ */
+  /* font-family: 'Freckle Face', cursive; *= require dataTables/jquery.dataTables
+ */
+  /* font-size: 36px; *= require dataTables/jquery.dataTables
+ */
+  /* columns: white; *= require dataTables/jquery.dataTables
+ */
   
   
   
@@ -361,7 +405,8 @@ body {
       height: 200px;
       width: 200px;
       /* height: 100%;
-      width: auto; */
+      width: auto; *= require dataTables/jquery.dataTables
+ */
   }
   
   body {
@@ -405,7 +450,8 @@ body {
       0% {transform: rotate(0deg);}
       50% {transform: rotate(1deg);}
       100% {transform: rotate(0deg);}
-  } */
+  } *= require dataTables/jquery.dataTables
+ */
   
   @keyframes spin { 
   0% {transform: rotateX(0deg) rotateY(0deg);}
@@ -414,7 +460,8 @@ body {
   }
   
   #shitContainer {
-      /* height: 40px; */
+      /* height: 40px; *= require dataTables/jquery.dataTables
+ */
       position: absolute;
       top: 49px;
       right: 8%;
@@ -431,7 +478,8 @@ body {
       animation-name: rotate;
   animation-duration: 3s;
   animation-iteration-count: 1;
-  /* z-index: 99; */
+  /* z-index: 99; *= require dataTables/jquery.dataTables
+ */
   animation: spin 1200ms 1 steps(80);
   transform-style: preserve-3d;
   }
@@ -456,26 +504,41 @@ body {
    }
   
    #titleContainer {
-       /* width: 450px; */
-       /* height: auto; */
-       /* border: .5px dotted rgb(0, 0, 0); */
-       /* margin: auto; */
-       /* background: black; */
-       /* align-self: center; */
-       /* z-index: 999999999999999; */
-       /* background: #70c1c2ab; */
-       /* border-radius: 100%; */
+       /* width: 450px; *= require dataTables/jquery.dataTables
+ */
+       /* height: auto; *= require dataTables/jquery.dataTables
+ */
+       /* border: .5px dotted rgb(0, 0, 0); *= require dataTables/jquery.dataTables
+ */
+       /* margin: auto; *= require dataTables/jquery.dataTables
+ */
+       /* background: black; *= require dataTables/jquery.dataTables
+ */
+       /* align-self: center; *= require dataTables/jquery.dataTables
+ */
+       /* z-index: 999999999999999; *= require dataTables/jquery.dataTables
+ */
+       /* background: #70c1c2ab; *= require dataTables/jquery.dataTables
+ */
+       /* border-radius: 100%; *= require dataTables/jquery.dataTables
+ */
        /* background: rgba(163, 146, 46, 0.18);
        background: rgba(46, 132, 163, 0.105);
        background: rgba(46, 132, 163, 0.105);
        background: linear-gradient(to bottom right, #b149ff 41%, #00ffff 34%);
-       background: linear-gradient(to bottom right, #b149ff 48%, #00ffff 34%); */
+       background: linear-gradient(to bottom right, #b149ff 48%, #00ffff 34%); *= require dataTables/jquery.dataTables
+ */
        
-       /* background: linear-gradient(to bottom right, #b149ff 48%, #2ebf76b5 34%); */
-       /* background: linear-gradient(to bottom right, rgba(198, 17, 215, 0.591) 48%, #00ffff 34%); */
-       /* background: rgba(0, 0, 0, 0.81); */
-       /* background: rgb(0, 0, 0, .88); */
-       /* box-shadow: 20px 20px rgba(198, 17, 215, 0.591);  */
+       /* background: linear-gradient(to bottom right, #b149ff 48%, #2ebf76b5 34%); *= require dataTables/jquery.dataTables
+ */
+       /* background: linear-gradient(to bottom right, rgba(198, 17, 215, 0.591) 48%, #00ffff 34%); *= require dataTables/jquery.dataTables
+ */
+       /* background: rgba(0, 0, 0, 0.81); *= require dataTables/jquery.dataTables
+ */
+       /* background: rgb(0, 0, 0, .88); *= require dataTables/jquery.dataTables
+ */
+       /* box-shadow: 20px 20px rgba(198, 17, 215, 0.591);  *= require dataTables/jquery.dataTables
+ */
    }
   
    .newSomething{
@@ -499,7 +562,8 @@ body {
        margin: auto;
        margin-left: 16%;
        margin-top: 3%;
-       /* background: rgba(103, 220, 255, 0.27); */
+       /* background: rgba(103, 220, 255, 0.27); *= require dataTables/jquery.dataTables
+ */
        background: rgba(173, 237, 23, 0.612);
        background: linear-gradient(to top, rgba(160, 18, 153, 0.397) 0%, #00ffff41 100%);
        border: 15px inset black;

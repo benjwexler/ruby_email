@@ -6,7 +6,7 @@ class CohortsController < ApplicationController
   # GET /cohorts
   # GET /cohorts.json
   def index
-    @cohorts = Cohort.all
+    @cohorts = Cohort.all.paginate(:per_page => 20, :page => params[:page])
 
     
 
@@ -15,6 +15,8 @@ class CohortsController < ApplicationController
   # GET /cohorts/1
   # GET /cohorts/1.json
   def show
+
+    @student = Student.new 
 
     @enrollment = Enrollment.new
 
@@ -76,6 +78,10 @@ class CohortsController < ApplicationController
         format.json { render json: @cohort.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def create_and_enroll
+
   end
 
   # PATCH/PUT /cohorts/1
